@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/MainView"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/pbcr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Partnership &amp; Business Collaboration Request"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/searchform"
+                android:layout_below="@+id/pbcr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/descriptionlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/media_bg_stroke"
+                                    android:layout_gravity="center">
+
+                                    <Spinner
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/region"
+                                        android:popupBackground="@color/primaryTextColor"
+                                        android:background="@null"/>
+
+                                    <TextView
+                                        android:id="@+id/SelectedRegions"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="36dp"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="5dp"
+                                        android:paddingRight="5dp"
+                                        android:visibility="gone"
+                                        android:text="Select regions"/>
+
+                                    <TextView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:drawableRight="@drawable/dropdown" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/media_bg_stroke"
+                                    android:layout_gravity="center">
+
+                                    <Spinner
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/service"
+                                        android:popupBackground="@color/primaryTextColor"
+                                        android:background="@null"/>
+
+                                    <TextView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:drawableRight="@drawable/dropdown" />
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/search_by_keyword"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:hint="Search by Keyword"
+                                    android:paddingLeft="5dp"
+                                    android:textSize="16sp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/media_bg_stroke"
+                                    android:maxLines="10"/>
+
+                                <EditText
+                                    android:id="@+id/search_comment"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:hint="Search Comments"
+                                    android:textSize="16sp"
+                                    android:paddingLeft="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/media_bg_stroke"
+                                    android:maxLines="10"/>
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <Button
+                                    android:textAllCaps="false"
+                                    android:layout_weight="1"
+                                    android:id="@+id/SearchButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_height="40dp"
+                                    android:text="Search"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:layout_gravity="center"
+                                    android:background="@color/colorPrimary"/>
+
+                                <Button
+                                    android:textAllCaps="false"
+                                    android:layout_weight="1"
+                                    android:id="@+id/AddButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="40dp"
+                                    android:text="Add Request"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:layout_gravity="center"
+                                    android:background="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:visibility="gone"
+                                android:layout_gravity="center"
+                                android:id="@+id/pb"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@+id/searchform"
+                android:id="@+id/pbcrlist">
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:background="#000000">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+
+</RelativeLayout>

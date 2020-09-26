@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FF2F3B46</color>
+    <!--<color name="colorPrimary">#00124c</color>-->
+    <!--<color name="primaryLightColor">#383779</color>-->
+    <!--<color name="colorAccent">#720B4C</color>-->
+
+    <color name="primaryLightColor">#FF3F505E</color>
+    <color name="colorPrimaryDark">#191f25</color>
+    <color name="colorAccent">#FFB64847</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="grey">#d6d6d7</color>
+    <color name="transparent_black">#98000000</color>
+    <color name="transparent_dark_black">#e8000000</color>
+    <color name="spinner_bg">#c2000000</color>
+    <color name="grey_text">#808080</color>
+    <color name="black">#000000</color>
+    <color name="blue_text">#035e9e</color>
+    <color name="transpaent">#00035e9e</color>
+    <color name="transpaent_blue">#d1275e76</color>
+    <color name="transpaent_white">#caffffff</color>
+    <color name="golden">#af9c7c</color>
+    <color name="indicator">#10d6b5</color>
+    <color name="chatbg">#FFF2E3DA</color>
+    <color name="notificationbg">#ece3de</color>
+
+
+
+
+
+
+
+</resources>

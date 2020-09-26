@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialogue_black_bg">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Updates"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:id="@+id/tm"/>
+
+    <ImageView
+        android:id="@+id/search_close_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_close_black_24dp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/tm"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:id="@+id/view">
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/view"
+        android:background="@drawable/dark_edit_bg"
+        android:id="@+id/priorityselect">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:padding="6dp"
+            android:id="@+id/search_categories"
+            android:popupBackground="@color/spinner_bg"
+            android:background="@drawable/dark_edit_bg"/>
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/dropdown" />
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_background"
+        android:layout_below="@+id/priorityselect"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text=" Search "
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:id="@+id/send"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:textAllCaps="false"/>
+
+
+    <ProgressBar
+        android:id="@+id/progess_load"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/CommentInfoRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/CommentCard"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/comment_box_borders">
+
+
+            <LinearLayout
+                android:id="@+id/ReqLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/MemberImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/index"
+                        android:gravity="start"
+                        android:layout_alignParentLeft="true"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Member Name"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textStyle="bold"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/CommentDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aug 29, 2018 02:16 PM"
+                            android:textColor="@color/grey_text"
+                            android:textStyle="bold"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <Button
+                    android:id="@+id/AccptReq"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/primaryTextColor"
+                    android:textAllCaps="false"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Accept"/>
+
+                <Button
+                    android:id="@+id/RejectReq"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/primaryTextColor"
+                    android:textAllCaps="false"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reject"/>
+
+            </LinearLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

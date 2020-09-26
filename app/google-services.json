@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "403746894501",
+    "firebase_url": "https://uabn-b3be8.firebaseio.com",
+    "project_id": "uabn-b3be8",
+    "storage_bucket": "uabn-b3be8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403746894501:android:a23bfefc116b057b9bd34c",
+        "android_client_info": {
+          "package_name": "com.uabn.gss.uabnlink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403746894501-segesnl14e6fckadtenhmaao67ioasdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6ajF9wbzxK3DmFFkpKl6xqNTFOCS17Wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403746894501-segesnl14e6fckadtenhmaao67ioasdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

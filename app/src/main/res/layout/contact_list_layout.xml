@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:background="@drawable/border_stroke">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/MemberLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:weightSum="5"
+                android:gravity="start">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/MemberImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:src="@drawable/sample"
+                    android:layout_alignParentLeft="true"/>
+
+
+                    <TextView
+                        android:id="@+id/MemberName"
+                        android:layout_weight="3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Member Name"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

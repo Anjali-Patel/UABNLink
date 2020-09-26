@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginBottom="50dp"
+                        android:id="@+id/descriptionlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="60dp"
+                        android:paddingTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/assistance_pbcr"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:text="@string/assistance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="15sp"
+                                android:text="@string/assistance_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/new_business_req"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:text="@string/pbcr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="15sp"
+                                android:text="@string/pbcr_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/yellow_bg"
+                            android:text="Create a PBCR below and get helpful feedback from our Network "/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:text="Reason for PBCR * "/>
+
+
+                            <RadioGroup
+                                android:id="@+id/RadiGroupPBCR"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:checked="true"
+                                    android:id="@+id/assistance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16sp"
+                                    android:text="Assistance"/>
+
+                                <RadioButton
+                                    android:id="@+id/new_business"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16sp"
+                                    android:text="New Business "/>
+                            </RadioGroup>
+
+
+                            <EditText
+                                android:focusable="false"
+                                android:id="@+id/appointment_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:hint="Response needed no later than *"
+                                android:textSize="16sp"
+                                android:padding="10dp"
+                                android:gravity="start"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/media_bg_stroke"/>
+
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/media_bg_stroke"
+                                android:layout_gravity="center">
+
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/search_industry"
+                                    android:popupBackground="@color/primaryTextColor"
+                                    android:background="@null"/>
+
+                                <TextView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:drawableRight="@drawable/dropdown" />
+
+                            </RelativeLayout>
+
+
+                            <EditText
+                                android:id="@+id/subject"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:hint="Subject*"
+                                android:textSize="16sp"
+                                android:layout_marginBottom="10dp"
+                                android:padding="10dp"
+                                android:gravity="start"
+                                android:background="@drawable/media_bg_stroke"/>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/media_bg_stroke"
+                                android:layout_gravity="center">
+
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/search_category"
+                                    android:popupBackground="@color/primaryTextColor"
+                                    android:background="@null"/>
+
+                                <TextView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:drawableRight="@drawable/dropdown" />
+
+
+                            </RelativeLayout>
+
+                            <EditText
+                                android:id="@+id/description"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:hint="Description*"
+                                android:padding="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="start"
+                                android:textSize="16sp"
+                                android:background="@drawable/media_bg_stroke"
+                                android:maxLines="10"/>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/media_bg_stroke"
+                                android:layout_gravity="center">
+
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/search_region"
+                                    android:popupBackground="@color/primaryTextColor"
+                                    android:background="@null"/>
+
+                                <TextView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:drawableRight="@drawable/dropdown" />
+
+                            </RelativeLayout>
+
+                            <EditText
+                                android:id="@+id/contact_person"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:hint="Contact Person"
+                                android:textSize="16sp"
+                                android:layout_marginBottom="10dp"
+                                android:padding="10dp"
+                                android:gravity="start"
+                                android:background="@drawable/media_bg_stroke"/>
+
+                            <EditText
+                                android:id="@+id/contact_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:hint="Contact Email"
+                                android:textSize="16sp"
+                                android:layout_marginBottom="10dp"
+                                android:padding="10dp"
+                                android:gravity="start"
+                                android:background="@drawable/media_bg_stroke"/>
+
+                            <EditText
+                                android:id="@+id/contact_email2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:hint="Contact Email 2"
+                                android:textSize="16sp"
+                                android:padding="10dp"
+                                android:gravity="start"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/media_bg_stroke"/>
+
+                            <EditText
+                                android:id="@+id/home_cell"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:hint="Tel. Home/Cell"
+                                android:textSize="16sp"
+                                android:padding="10dp"
+                                android:gravity="start"
+                                android:background="@drawable/media_bg_stroke"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="(Include Country Code)"/>
+
+                            <EditText
+                                android:id="@+id/tel_business"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:hint="Tel. Business"
+                                android:textSize="16sp"
+                                android:padding="10dp"
+                                android:gravity="start"
+                                android:background="@drawable/media_bg_stroke"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp"
+                                android:layout_marginBottom="10dp"
+                                android:text="(Include Country Code)"/>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:weightSum="4">
+
+                                <TextView
+                                    android:clickable="false"
+                                    android:id="@+id/document"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:text="Document"
+                                    android:textSize="16sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_vertical"
+                                    android:background="@drawable/media_bg_stroke"
+                                    android:paddingLeft="10dp"
+                                    android:layout_marginRight="5dp"
+                                    android:drawableLeft="@drawable/ic_link_24dp"/>
+
+                                <TextView
+                                    android:layout_marginLeft="100dp"
+                                    android:id="@+id/picture"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:text="Picture"
+                                    android:textSize="16sp"
+                                    android:layout_weight="2"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/media_bg_stroke"
+                                    android:drawableLeft="@drawable/ic_photo_24dp"/>
+
+
+                            </LinearLayout>
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/Images_listview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/l_add_photo"
+                                android:background="@android:color/transparent"
+                                android:scrollbars="horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:visibility="gone"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp" />
+
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/SelectedDoc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:gravity="start"
+                                android:text="qwew"
+                                android:textStyle="bold"
+                                android:textColor="@color/blue_text"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="20dp"
+                                />
+                            <Button
+                                android:id="@+id/ShareButton"
+                                android:layout_width="150dp"
+                                android:layout_height="40dp"
+                                android:text="Save"
+                                android:textColor="@color/primaryTextColor"
+                                android:layout_gravity="center"
+                                android:background="@drawable/btn_background"/>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progess_load"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

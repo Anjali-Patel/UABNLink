@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/CommentInfoRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/CommentCard"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/comment_box_borders">
+            <!--<ProgressBar-->
+            <!--android:id="@+id/pb"-->
+            <!--android:visibility="invisible"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp" />-->
+
+
+            <LinearLayout
+                android:id="@+id/CommentLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/CommentorImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/index"
+                        android:gravity="start"
+                        android:layout_alignParentLeft="true"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="5dp">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/CommentorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Member Name"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold"
+                                android:textSize="15dp" />
+                            <LinearLayout
+                                android:gravity="end"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/delete_img"
+                                    android:src="@drawable/ic_delete_black_24dp"
+                                    android:layout_width="25dp"
+                                    android:visibility="gone"
+                                    android:layout_height="25dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/CommentDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aug 29, 2018 02:16 PM"
+                            android:textColor="@color/grey_text"
+                            android:textStyle="bold"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/CommentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="commeny content"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/LikeCommentRelative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/CommentLinear"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="start"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="start"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/LikeCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Likes"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/CommentCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:text="0"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/ReplyText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Replies"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/Like"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="30dp"
+                                android:src="@drawable/ic_like"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/Comment"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="2dp"
+                                android:src="@drawable/ic_comment"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

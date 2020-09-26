@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/pbcr"
+            android:icon="@drawable/pbcr"
+            android:title="Assistance Request" />
+
+        <item
+            android:id="@+id/business"
+            android:icon="@drawable/business"
+            android:title="Registered Business" />
+
+        <item
+            android:id="@+id/events"
+            android:icon="@drawable/event"
+            android:title="Events" />
+
+        <item
+            android:id="@+id/groups"
+            android:icon="@drawable/groups"
+            android:title="Groups  " />
+
+        <item
+            android:id="@+id/document"
+            android:icon="@drawable/document"
+            android:title="Documents &amp; Resources " />
+
+        <item
+            android:id="@+id/contact"
+            android:icon="@drawable/contact"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/subsribe"
+            android:icon="@drawable/ic_star_black_24dp"
+            android:title="Be Premium" />
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/aboutus"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Sign Out" />
+
+
+
+</menu>

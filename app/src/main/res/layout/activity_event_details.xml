@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.EventDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/MainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--android:visibility="gone"-->
+
+
+
+            <RelativeLayout
+                android:id="@+id/HeaderRelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<ImageView-->
+
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:src="@drawable/detailbannerbg"-->
+                    <!--android:id="@+id/event_cover_image"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                   <!--/>-->
+                <RelativeLayout
+
+                    android:id="@+id/r1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="0dp" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/eventimage"-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="100dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_below="@+id/title"-->
+                    <!--android:src="@drawable/noimage"-->
+                    <!--android:layout_marginStart="20dp" />-->
+
+            </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_width="match_parent"
+                    android:background="@color/transpaent_blue"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Description"
+                        android:textColor="@color/transpaent_white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/desc"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/transpaent_white"
+                        android:textSize="16sp" />
+
+                    <ProgressBar
+                        android:id="@+id/pb"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl1"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/border_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Start Date"
+                                android:textColor="@color/golden"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/startdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv1"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/border_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="End Date"
+                            android:textColor="@color/golden"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/enddate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv2"
+                            android:textSize="16sp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/border_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Event Type"
+                                android:textColor="@color/golden"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv3"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/border_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Country Name"
+                                android:textColor="@color/golden"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/country"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/rl5">
+
+                    <TextView
+                        android:id="@+id/Interested"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Interested in this event?"/>
+
+                    <TextView
+                        android:id="@+id/GuestList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp"
+                        android:text="View Guests List"/>
+
+                    <TextView
+                        android:id="@+id/Comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue_text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Comments"/>
+
+                </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+
+                        <Button
+                            android:id="@+id/EventImagesExpand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="Images"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/EventImages"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/EventImagesExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ImageLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bluestroke_bg"
+                                android:layout_marginBottom="10dp"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Images"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/noImage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Content"
+                                    android:visibility="gone"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"/>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/Images_listview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/l_add_photo"
+                                    android:background="@android:color/transparent"
+                                    android:scrollbars="horizontal"
+                                    android:layout_margin="10dp"
+                                    android:layout_gravity="center_horizontal" />
+
+                            </LinearLayout>
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                        <Button
+                            android:id="@+id/EventVideoExpand"
+                            android:layout_below="@+id/EventImages"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="Video"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/EventVideo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/EventVideoExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/videoLinear"
+                                android:layout_below="@+id/ImageLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bluestroke_bg"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <WebView
+                                        android:id="@+id/WebVideo"
+                                        android:layout_width="300dp"
+                                        android:layout_height="200dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_gravity="center_horizontal" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                        <Button
+                            android:id="@+id/EventDocumentExpand"
+                            android:layout_below="@+id/EventVideo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Documents"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/EventDocument"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/EventDocumentExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/DocumentLinear"
+                                android:layout_below="@+id/videoLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bluestroke_bg"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Documents"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/noDoc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"/>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/document_listview"
+                                    android:layout_below="@+id/AddAudio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/l_add_photo"
+                                    android:background="@android:color/transparent"
+                                    android:scrollbars="horizontal"
+                                    android:layout_margin="10dp"
+                                    android:layout_gravity="center_horizontal" />
+
+                                <ImageView
+                                    android:id="@+id/AddDoc"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/Images_listview"
+                                    android:gravity="center"
+                                    android:layout_gravity="end"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/add_media"/>
+
+
+
+                            </LinearLayout>
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                        <Button
+                            android:id="@+id/EventConfirmInterestExpand"
+                            android:layout_below="@+id/EventDocument"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="Confirmed"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/EventConfirmList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/EventConfirmInterestExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ConfirmedLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bluestroke_bg"
+                                android:layout_marginBottom="10dp"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+
+
+                                <TextView
+                                    android:id="@+id/noCfmList"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Content"
+                                    android:visibility="gone"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"/>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/confirmed_listview"
+                                    android:layout_below="@+id/AddAudio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/l_add_photo"
+                                    android:background="@android:color/transparent"
+                                    android:scrollbars="horizontal"
+                                    android:layout_margin="10dp"
+                                    android:layout_gravity="center_horizontal" />
+
+                            </LinearLayout>
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                        <Button
+                            android:id="@+id/EventMayAttendExpand"
+                            android:layout_below="@+id/EventConfirmList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="May Attend"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/EventMayAttendList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/EventMayAttendExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/MayAttendLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bluestroke_bg"
+                                android:layout_marginBottom="10dp"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/noMayList"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Content"
+                                    android:visibility="gone"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"/>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/may_attend_listview"
+                                    android:layout_below="@+id/AddAudio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/l_add_photo"
+                                    android:background="@android:color/transparent"
+                                    android:scrollbars="horizontal"
+                                    android:layout_margin="10dp"
+                                    android:layout_gravity="center_horizontal" />
+
+
+                            </LinearLayout>
+
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                        <Button
+                            android:id="@+id/EventDeclinedExpand"
+                            android:layout_below="@+id/EventMayAttendList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="Declined"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/EventDeclinedList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/EventDeclinedExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/DeclineLinear"
+                                android:layout_below="@+id/MayAttendLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bluestroke_bg"
+                                android:layout_marginBottom="10dp"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+
+
+                                <TextView
+                                    android:id="@+id/noDeclineList"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Content"
+                                    android:visibility="gone"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"/>
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/declined_listview"
+                                    android:layout_below="@+id/AddAudio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/l_add_photo"
+                                    android:background="@android:color/transparent"
+                                    android:scrollbars="horizontal"
+                                    android:layout_margin="10dp"
+                                    android:layout_gravity="center_horizontal" />
+
+
+                            </LinearLayout>
+
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:background="#000000">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+</RelativeLayout>

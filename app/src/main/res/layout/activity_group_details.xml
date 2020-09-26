@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.GroupDetails">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/MainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/CatCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:background="@drawable/detailbannerbg"
+                        android:id="@+id/group_banner_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:scaleType="fitXY" />
+                    <RelativeLayout
+
+                        android:id="@+id/r1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/mPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp" />
+
+                        <me.relex.circleindicator.CircleIndicator
+                            android:id="@+id/indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Business name of united business network"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/groupimage"
+                        android:layout_width="120dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/title"
+                        android:layout_marginStart="20dp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/border_stroke"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transpaent_blue">
+
+                        <TextView
+                            android:id="@+id/desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Description"
+                            android:textColor="@color/transpaent_white"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/desc"
+                            android:layout_margin="10dp"
+                            android:textColor="@color/transpaent_white"
+                            android:textSize="16sp" />
+
+                        <ProgressBar
+                            android:id="@+id/pb"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/groupdatalinear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/border_stroke"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="By"
+                                    android:textColor="@color/golden"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/groupby"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv1"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/border_stroke"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Group Type"
+                                    android:textColor="@color/golden"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/grouptype"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv2"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/border_stroke"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Access Type"
+                                    android:textColor="@color/golden"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/accesstype"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv3"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/border_stroke"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Country"
+                                    android:textColor="@color/golden"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/country"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv3"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/border_stroke"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Group Members"
+                                    android:textColor="@color/golden"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/membercount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv3"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/border_stroke"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date Created "
+                                    android:textColor="@color/golden"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv4"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/border_stroke"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/viewlable"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Views "
+                                    android:textColor="@color/golden"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/views"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/viewlable"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <LinearLayout
+                            android:id="@+id/rl7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl56"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/Comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_comment"
+                                android:gravity="center_vertical"
+                                android:padding="2dp"
+                                android:text=" Comment" />
+
+                            <TextView
+                                android:id="@+id/LikeGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_like"
+                                android:gravity="center_vertical"
+                                android:padding="2dp"
+                                android:text=" Like"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/DisLikeGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_dislike"
+                                android:gravity="center_vertical"
+                                android:padding="2dp"
+                                android:text=" Dislike"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl56"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/JoinGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/join_group"
+                                android:gravity="center_vertical"
+                                android:padding="2dp"
+                                android:text=" Join" />
+
+                            <TextView
+                                android:id="@+id/Share"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_share_24dp"
+                                android:gravity="center_vertical"
+                                android:padding="2dp"
+                                android:text=" Share" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/groupdatalinear"
+                        android:layout_marginBottom="10dp">
+
+                        <Button
+                            android:id="@+id/GroupImagesExpand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="Images"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/GroupImages"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/GroupImagesExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ImageLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bluestroke_bg"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/noImage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="No Content"
+                                    android:visibility="gone" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/Images_listview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="10dp"
+                                    android:layout_toRightOf="@+id/l_add_photo"
+                                    android:background="@android:color/transparent"
+                                    android:scrollbars="horizontal" />
+
+                                <ImageView
+                                    android:id="@+id/AddPhoto"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/Images_listview"
+                                    android:layout_gravity="end"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center"
+                                    android:src="@drawable/add_media" />
+
+
+                            </LinearLayout>
+
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                        <!--<Button-->
+                            <!--android:id="@+id/GroupMusicExpand"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/GroupImages"-->
+                            <!--android:background="@color/transpaent_blue"-->
+                            <!--android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:paddingLeft="10dp"-->
+                            <!--android:text="Music"-->
+                            <!--android:textAllCaps="false"-->
+                            <!--android:textColor="@color/primaryTextColor"-->
+                            <!--android:textStyle="bold" />-->
+
+                        <!--<com.github.aakira.expandablelayout.ExpandableRelativeLayout-->
+                            <!--android:id="@+id/GroupMusic"-->
+                            <!--android:visibility="gone"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_marginBottom="10dp"-->
+                            <!--android:layout_below="@+id/GroupMusicExpand"-->
+                            <!--app:ael_duration="500"-->
+                            <!--app:ael_expanded="false"-->
+                            <!--app:ael_interpolator="linear"-->
+                            <!--app:ael_orientation="vertical">-->
+
+
+                            <!--<LinearLayout-->
+                                <!--android:id="@+id/AudioLinear"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@+id/ImageLinear"-->
+                                <!--android:background="@drawable/bluestroke_bg"-->
+                                <!--android:orientation="vertical"-->
+                                <!--android:visibility="gone">-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/noMusic"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_marginLeft="10dp"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:text="No Content"-->
+                                    <!--android:visibility="gone" />-->
+
+                                <!--<android.support.v7.widget.RecyclerView-->
+                                    <!--android:id="@+id/Audio_listview"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_below="@+id/AddPhoto"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:layout_margin="10dp"-->
+                                    <!--android:layout_toRightOf="@+id/l_add_photo"-->
+                                    <!--android:background="@android:color/transparent"-->
+                                    <!--android:scrollbars="horizontal" />-->
+
+
+                                <!--<LinearLayout-->
+                                    <!--android:id="@+id/MusicPlayer"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:layout_marginBottom="5dp"-->
+                                    <!--android:background="@color/transpaent_blue"-->
+                                    <!--android:gravity="center_horizontal"-->
+                                    <!--android:orientation="horizontal"-->
+                                    <!--android:visibility="gone">-->
+
+                                    <!--<ImageView-->
+                                        <!--android:id="@+id/playaudio"-->
+                                        <!--android:layout_width="30dp"-->
+                                        <!--android:layout_height="30dp"-->
+                                        <!--android:layout_alignParentRight="true"-->
+                                        <!--android:layout_marginLeft="10dp"-->
+                                        <!--android:gravity="center"-->
+                                        <!--android:src="@drawable/ic_play_circle_filled_black_24dp" />-->
+
+                                    <!--<SeekBar-->
+                                        <!--android:id="@+id/play_audio_progressbar"-->
+                                        <!--style="@android:style/Widget.ProgressBar.Horizontal"-->
+                                        <!--android:layout_width="250dp"-->
+                                        <!--android:layout_height="15dp"-->
+                                        <!--android:layout_gravity="center_vertical"-->
+                                        <!--android:layout_marginLeft="5dp"-->
+                                        <!--android:layout_marginRight="5dp"-->
+                                        <!--android:max="100"-->
+                                        <!--android:outlineAmbientShadowColor="@color/colorAccent" />-->
+
+                                    <!--<ImageView-->
+                                        <!--android:id="@+id/pauseaudio"-->
+                                        <!--android:layout_width="30dp"-->
+                                        <!--android:layout_height="30dp"-->
+                                        <!--android:layout_alignParentRight="true"-->
+                                        <!--android:layout_marginRight="10dp"-->
+                                        <!--android:gravity="center"-->
+                                        <!--android:src="@drawable/ic_pause_circle_filled_black_24dp" />-->
+                                <!--</LinearLayout>-->
+
+                                <!--<ImageView-->
+                                    <!--android:id="@+id/AddAudio"-->
+                                    <!--android:layout_width="30dp"-->
+                                    <!--android:layout_height="30dp"-->
+                                    <!--android:layout_below="@+id/Images_listview"-->
+                                    <!--android:layout_gravity="end"-->
+                                    <!--android:layout_marginRight="10dp"-->
+                                    <!--android:layout_marginBottom="5dp"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:src="@drawable/add_media" />-->
+
+                            <!--</LinearLayout>-->
+
+                        <!--</com.github.aakira.expandablelayout.ExpandableRelativeLayout>-->
+
+
+                        <Button
+                            android:id="@+id/GroupDocuementdExpand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="Documents"
+                            android:textAllCaps="false"
+                            android:visibility="gone"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/GroupDocs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/GroupDocuementdExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/DocumentLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/AudioLinear" android:background="@drawable/bluestroke_bg"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+
+                                <TextView
+                                    android:id="@+id/noDocuemnt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="No Content"
+                                    android:visibility="gone" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/document_listview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/AddAudio"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="10dp"
+                                    android:layout_toRightOf="@+id/l_add_photo"
+                                    android:background="@android:color/transparent"
+                                    android:scrollbars="horizontal" />
+
+                                <ImageView
+                                    android:id="@+id/AddDoc"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/Images_listview"
+                                    android:layout_gravity="end"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center"
+                                    android:src="@drawable/add_media" />
+
+                            </LinearLayout>
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                        <Button
+                            android:id="@+id/GroupEventExpand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/GroupDocs"
+                            android:background="@color/transpaent_blue"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="Events"
+                            android:visibility="gone"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primaryTextColor"
+                            android:textStyle="bold" />
+
+                        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                            android:id="@+id/GroupEvent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/GroupEventExpand"
+                            app:ael_duration="500"
+                            app:ael_expanded="false"
+                            app:ael_interpolator="linear"
+                            app:ael_orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/EventLinear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bluestroke_bg"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Events"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/event_listview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="10dp"
+                                    android:background="@android:color/transparent" />
+
+
+                            </LinearLayout>
+                        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progress_load"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:animateLayoutChanges="true"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+</RelativeLayout>

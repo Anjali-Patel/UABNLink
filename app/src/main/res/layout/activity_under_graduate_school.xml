@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activities.UnderGraduateSchoolActivity">
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:theme="@style/ToolbarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:text="Under Graduate School"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="22sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/input_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/search_box"
+        android:drawableLeft="@drawable/ic_search_24dp"
+        android:focusedByDefault="false"
+        android:gravity="left"
+        android:hint=" Find Contact"
+        android:drawablePadding="5dp"
+        android:textSize="16sp"
+        android:inputType="textCapWords"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"/>
+    <RelativeLayout
+        android:id="@+id/other_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/other"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border_stroke">
+            <TextView
+                android:textAllCaps="false"
+                android:text="Other"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"/>
+        </android.support.v7.widget.CardView>
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/other"
+            android:background="@color/primaryTextColor"
+            android:padding="10dp"
+            app:ael_duration="400"
+            app:ael_expanded="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:ael_interpolator="linear"
+            app:ael_orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:visibility="gone"
+                    android:textAllCaps="false"
+                    android:id="@+id/other_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/search_box"
+                    android:focusedByDefault="false"
+                    android:gravity="left"
+                    android:hint="Enter Under Graduate School Name"
+                    android:textSize="16sp"
+                    android:paddingTop="5dp"/>
+                <Button
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorAccent"
+                    android:textAllCaps="false"
+                    android:text="Add"
+                    android:id="@+id/add"
+                    android:background="@drawable/red_stroke_button"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/other_relative"
+        android:id="@+id/high_school_list">
+    </android.support.v7.widget.RecyclerView>
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:background="#000000">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+
+
+</LinearLayout>

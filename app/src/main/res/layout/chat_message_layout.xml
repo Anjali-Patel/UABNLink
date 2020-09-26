@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ChatLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/MessageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/ImageBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/MessageImage1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/noimage"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <ImageView
+                android:id="@+id/MessageImage2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/noimage"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <ImageView
+                android:id="@+id/MessageImage3"
+                android:layout_width="80dp"
+                android:src="@drawable/noimage"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ImageBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/MessageImage4"
+                android:layout_width="80dp"
+                android:src="@drawable/noimage"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <ImageView
+                android:id="@+id/MessageImage5"
+                android:layout_width="80dp"
+                android:src="@drawable/noimage"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/MessageAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audio File"
+            android:drawableLeft="@drawable/music_note_grey"
+            android:textColor="@color/grey_text"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/MusicPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:background="@color/transpaent_blue"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/playaudio"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/ic_play_circle_filled_black_24dp" />
+
+            <ImageView
+                android:id="@+id/pauseaudio"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:src="@drawable/ic_pause_circle_filled_black_24dp" />
+
+            <SeekBar
+                android:id="@+id/play_audio_progressbar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="150dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:max="100"
+                android:outlineAmbientShadowColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/MessageDoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Docuement"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="@color/blue_text"
+            android:drawableLeft="@drawable/docuemnt_white"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/videoRelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/VideoImage"
+                android:layout_width="200dp"
+                android:src="@drawable/noimage"
+                android:layout_height="120dp"
+                android:layout_marginBottom="5dp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/play_button_video" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/MessageDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug 29, 2018 02:16 PM"
+            android:textColor="@color/grey_text"
+            android:textSize="10dp" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

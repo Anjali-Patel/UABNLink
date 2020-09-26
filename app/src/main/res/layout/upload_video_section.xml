@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/MediaSelectionRelative"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="70dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="#00000000">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/blue_stroke_bg"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:id="@+id/gallery_video"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primaryTextColor"
+                        android:padding="5dp"
+                        android:background="@drawable/upload_video_section"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gallery "
+                        android:layout_marginTop="5dp"
+
+                        android:textSize="12sp"
+                        />
+
+
+                    <TextView
+                        android:textAllCaps="false"
+                      android:id="@+id/camera_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/primaryTextColor"
+                        android:padding="5dp"
+                        android:background="@drawable/upload_video_section"
+                        android:text="Camera "
+
+                        android:textSize="12sp"
+                        />
+
+                <TextView
+                    android:textAllCaps="false"
+                 android:id="@+id/embed_video"
+                    android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Embed code"
+                        android:layout_marginTop="5dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:padding="5dp"
+                    android:background="@drawable/upload_video_section"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!--<LinearLayout-->
+
+        <!--android:id="@+id/video_section"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<TextView-->
+            <!--android:id="@+id/gallery_video"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:text="Gallery"-->
+            <!--android:textAlignment="center"-->
+            <!--android:background="@drawable/upload_video_section"-->
+            <!--android:textColor="@color/primaryTextColor"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<TextView-->
+            <!--android:textAllCaps="false"-->
+            <!--android:text="Camera"-->
+            <!--android:id="@+id/camera_video"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:background="@drawable/upload_video_section"-->
+            <!--android:textColor="@color/primaryTextColor"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/embede_code"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:text="embeded code"-->
+            <!--android:background="@drawable/upload_video_section"-->
+            <!--android:textColor="@color/primaryTextColor"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:padding="5dp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>

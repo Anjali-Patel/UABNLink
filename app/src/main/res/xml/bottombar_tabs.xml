@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/bottom_home_24dp" />
+
+    <tab
+        id="@+id/tab_post"
+        icon="@drawable/bottom_post_24dp" />
+    <tab
+        id="@+id/tab_members"
+        icon="@drawable/bottom_members_24dp"/>
+
+    <tab
+        id="@+id/tab_request"
+        icon="@drawable/bottom_req_24dp"/>
+
+    <tab
+        id="@+id/tab_notify"
+        icon="@drawable/bottom_notify_24dp"/>
+
+</tabs>
